@@ -1,4 +1,4 @@
-host: 'kong.dev:8001'
+host: 'kong.docker:8001'
 apis:
 {{ range $host, $containers := groupByMulti $ "Env.VIRTUAL_HOST" "," }}
 {{ range $index, $value := $containers }}
